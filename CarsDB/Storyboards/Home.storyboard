@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wrc-89-DEy">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Heavy.otf">
+            <string>SFProDisplay-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="ri1-TY-k7F">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Wrc-89-DEy" customClass="HomeViewController" customModule="CarsDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e7K-kV-F4a">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gNI-cR-XnF">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-do-xNg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Lite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDy-hh-pU6">
+                                        <rect key="frame" x="165.33333333333334" y="12" width="62.333333333333343" height="20"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Heavy" family="SF Pro Display" pointSize="17"/>
+                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-EV-9Ry">
+                                        <rect key="frame" x="335" y="2" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TAF-OX-DKn"/>
+                                            <constraint firstAttribute="width" secondItem="bqS-EV-9Ry" secondAttribute="height" multiplier="1:1" id="WoG-hm-Jko"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                        <state key="normal" image="icon-menu"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ApW-w3-H6C"/>
+                                    <constraint firstItem="bqS-EV-9Ry" firstAttribute="centerY" secondItem="TLL-do-xNg" secondAttribute="centerY" id="XMq-0m-J6z"/>
+                                    <constraint firstItem="HDy-hh-pU6" firstAttribute="centerY" secondItem="TLL-do-xNg" secondAttribute="centerY" id="dQo-m1-WMI"/>
+                                    <constraint firstAttribute="trailing" secondItem="bqS-EV-9Ry" secondAttribute="trailing" constant="18" id="tkP-dg-PMQ"/>
+                                    <constraint firstItem="HDy-hh-pU6" firstAttribute="centerX" secondItem="TLL-do-xNg" secondAttribute="centerX" id="urh-OI-euM"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-oQ-Zl2">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kUc-3T-Dsr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kUc-3T-Dsr" firstAttribute="trailing" secondItem="gNI-cR-XnF" secondAttribute="trailing" id="6m0-P6-b81"/>
+                            <constraint firstItem="gNI-cR-XnF" firstAttribute="leading" secondItem="kUc-3T-Dsr" secondAttribute="leading" id="9Cv-mw-gFC"/>
+                            <constraint firstItem="TLL-do-xNg" firstAttribute="leading" secondItem="kUc-3T-Dsr" secondAttribute="leading" id="C3L-gP-ukK"/>
+                            <constraint firstItem="0w9-oQ-Zl2" firstAttribute="centerY" secondItem="e7K-kV-F4a" secondAttribute="centerY" id="OmL-Vf-62g"/>
+                            <constraint firstItem="kUc-3T-Dsr" firstAttribute="bottom" secondItem="gNI-cR-XnF" secondAttribute="bottom" id="Qa6-wk-gi4"/>
+                            <constraint firstItem="TLL-do-xNg" firstAttribute="top" secondItem="kUc-3T-Dsr" secondAttribute="top" id="Ub2-q4-qkw"/>
+                            <constraint firstItem="0w9-oQ-Zl2" firstAttribute="centerX" secondItem="e7K-kV-F4a" secondAttribute="centerX" id="VFC-aE-fN3"/>
+                            <constraint firstItem="kUc-3T-Dsr" firstAttribute="trailing" secondItem="TLL-do-xNg" secondAttribute="trailing" id="VGg-iU-Ryj"/>
+                            <constraint firstItem="gNI-cR-XnF" firstAttribute="top" secondItem="TLL-do-xNg" secondAttribute="bottom" id="uOr-zB-6uX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="tab-search" id="GAT-pG-LTV"/>
+                    <connections>
+                        <outlet property="indicatorIcon" destination="0w9-oQ-Zl2" id="8yn-8m-ysL"/>
+                        <outlet property="tableView" destination="gNI-cR-XnF" id="qFz-lC-Ksd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wB-0Z-ij9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097" y="-1064"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-menu" width="50" height="50"/>
+        <image name="tab-search" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

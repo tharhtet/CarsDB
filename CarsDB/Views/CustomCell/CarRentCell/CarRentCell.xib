@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarRentCell" rowHeight="243" id="DoH-3I-IHi" customClass="CarRentCell" customModule="CarsDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="251"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DoH-3I-IHi" id="XLz-vJ-pBq">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="251"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAV-7Q-nez">
+                        <rect key="frame" x="18" y="0.0" width="357" height="233"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-9q-zoP">
+                                <rect key="frame" x="0.0" y="0.0" width="357" height="178.66666666666666"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178.66666666666666" id="HdY-gW-j7B"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018 Nissan Sentra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-e4-8Nz">
+                                <rect key="frame" x="0.0" y="188.66666666666666" width="275" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.18039215689999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44.72 $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCX-9N-oPr">
+                                <rect key="frame" x="290.66666666666669" y="188.66666666666666" width="66.333333333333314" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.18039215689999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzf-8T-j5A">
+                                <rect key="frame" x="0.0" y="216" width="22.666666666666668" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
+                                <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.16 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDS-dl-VZl">
+                                <rect key="frame" x="310" y="216" width="47" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="kzf-8T-j5A" firstAttribute="leading" secondItem="vAV-7Q-nez" secondAttribute="leading" id="7Yc-GF-6R4"/>
+                            <constraint firstItem="kzf-8T-j5A" firstAttribute="top" secondItem="4pA-e4-8Nz" secondAttribute="bottom" constant="8" id="GNJ-IA-Qz9"/>
+                            <constraint firstItem="rDS-dl-VZl" firstAttribute="top" secondItem="kzf-8T-j5A" secondAttribute="top" id="J9i-rg-7lR"/>
+                            <constraint firstAttribute="bottom" secondItem="Akj-9q-zoP" secondAttribute="bottom" constant="54.333333333333343" id="JZU-Xo-dQK"/>
+                            <constraint firstAttribute="bottom" secondItem="kzf-8T-j5A" secondAttribute="bottom" id="NB1-Ks-rko"/>
+                            <constraint firstAttribute="trailing" secondItem="GCX-9N-oPr" secondAttribute="trailing" id="QwP-3R-48a"/>
+                            <constraint firstAttribute="trailing" secondItem="rDS-dl-VZl" secondAttribute="trailing" id="RpL-Qi-d5p"/>
+                            <constraint firstItem="Akj-9q-zoP" firstAttribute="leading" secondItem="vAV-7Q-nez" secondAttribute="leading" id="UIm-Ov-bGm"/>
+                            <constraint firstItem="Akj-9q-zoP" firstAttribute="top" secondItem="vAV-7Q-nez" secondAttribute="top" id="V7e-Xq-ZVN"/>
+                            <constraint firstItem="GCX-9N-oPr" firstAttribute="top" secondItem="4pA-e4-8Nz" secondAttribute="top" id="g8v-yR-59l"/>
+                            <constraint firstItem="4pA-e4-8Nz" firstAttribute="leading" secondItem="vAV-7Q-nez" secondAttribute="leading" id="gS4-T3-ka2"/>
+                            <constraint firstAttribute="trailing" secondItem="4pA-e4-8Nz" secondAttribute="trailing" constant="82" id="hqs-xj-W6M"/>
+                            <constraint firstAttribute="trailing" secondItem="Akj-9q-zoP" secondAttribute="trailing" id="ioT-s8-NTl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vAV-7Q-nez" firstAttribute="top" secondItem="XLz-vJ-pBq" secondAttribute="top" id="Gdo-Yf-Bvd"/>
+                    <constraint firstAttribute="trailing" secondItem="vAV-7Q-nez" secondAttribute="trailing" constant="18" id="WlH-Wp-4wf"/>
+                    <constraint firstItem="vAV-7Q-nez" firstAttribute="leading" secondItem="XLz-vJ-pBq" secondAttribute="leading" constant="18" id="l5j-vz-YNx"/>
+                    <constraint firstAttribute="bottom" secondItem="vAV-7Q-nez" secondAttribute="bottom" constant="18" id="yZd-t0-8yN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="carImageView" destination="Akj-9q-zoP" id="4DG-vJ-NYX"/>
+                <outlet property="mileLabel" destination="rDS-dl-VZl" id="AM6-vw-MYp"/>
+                <outlet property="mileageLabel" destination="kzf-8T-j5A" id="1Zk-gx-UG9"/>
+                <outlet property="priceLabel" destination="GCX-9N-oPr" id="rjN-9T-WPa"/>
+                <outlet property="titleLabel" destination="4pA-e4-8Nz" id="Go9-Z8-SSg"/>
+            </connections>
+            <point key="canvasLocation" x="377.86259541984731" y="79.225352112676063"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCell" id="PZh-gb-g60" customClass="OnboardingCell" customModule="CarsDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="452"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0LQ-Jk-JyF">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="452"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68C-n3-0V8">
+                        <rect key="frame" x="18" y="292" width="279" height="21.666666666666686"/>
+                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="18"/>
+                        <color key="textColor" red="0.12549019607843137" green="0.1764705882352941" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0Q-dX-fjk">
+                        <rect key="frame" x="18" y="325.66666666666669" width="279" height="18"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                        <color key="textColor" red="0.41176470588235292" green="0.41568627450980389" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Iu-qO-2ym" customClass="LottieAnimationView" customModule="Lottie">
+                        <rect key="frame" x="0.0" y="54" width="315" height="226"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="68C-n3-0V8" firstAttribute="leading" secondItem="0LQ-Jk-JyF" secondAttribute="leading" constant="18" id="0bg-Tx-NGh"/>
+                    <constraint firstItem="0Iu-qO-2ym" firstAttribute="top" secondItem="0LQ-Jk-JyF" secondAttribute="top" constant="54" id="1Nz-TF-IlX"/>
+                    <constraint firstItem="z0Q-dX-fjk" firstAttribute="leading" secondItem="68C-n3-0V8" secondAttribute="leading" id="Dsg-Ap-W8p"/>
+                    <constraint firstAttribute="trailing" secondItem="68C-n3-0V8" secondAttribute="trailing" constant="18" id="Eav-2v-ieK"/>
+                    <constraint firstAttribute="trailing" secondItem="0Iu-qO-2ym" secondAttribute="trailing" id="Fgg-vK-vhg"/>
+                    <constraint firstItem="0Iu-qO-2ym" firstAttribute="height" secondItem="0LQ-Jk-JyF" secondAttribute="height" multiplier="0.5" id="O7m-Tl-Fab"/>
+                    <constraint firstItem="68C-n3-0V8" firstAttribute="top" secondItem="0Iu-qO-2ym" secondAttribute="bottom" constant="12" id="peX-dq-5hW"/>
+                    <constraint firstItem="z0Q-dX-fjk" firstAttribute="top" secondItem="68C-n3-0V8" secondAttribute="bottom" constant="12" id="tgy-ow-nkN"/>
+                    <constraint firstItem="0Iu-qO-2ym" firstAttribute="leading" secondItem="0LQ-Jk-JyF" secondAttribute="leading" id="urs-ct-pJe"/>
+                    <constraint firstItem="z0Q-dX-fjk" firstAttribute="trailing" secondItem="68C-n3-0V8" secondAttribute="trailing" id="xKb-in-k8C"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="315" height="452"/>
+            <connections>
+                <outlet property="descLabel" destination="z0Q-dX-fjk" id="MAM-2T-6GI"/>
+                <outlet property="imageView" destination="0Iu-qO-2ym" id="7A9-ad-Eme"/>
+                <outlet property="titleLabel" destination="68C-n3-0V8" id="pOJ-Lt-0xf"/>
+            </connections>
+            <point key="canvasLocation" x="183.96946564885496" y="8.4507042253521139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
