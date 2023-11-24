@@ -44,6 +44,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                         <state key="normal" image="icon-menu"/>
+                                        <connections>
+                                            <action selector="menuAction:" destination="Wrc-89-DEy" eventType="touchUpInside" id="uMC-L3-eEY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

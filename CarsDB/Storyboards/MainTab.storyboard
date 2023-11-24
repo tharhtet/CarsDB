@@ -25,22 +25,6 @@
             </objects>
             <point key="canvasLocation" x="-2062" y="-13"/>
         </scene>
-        <!--Account-->
-        <scene sceneID="r0t-Vy-t4a">
-            <objects>
-                <viewController id="C4K-71-hyb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cS8-KY-Zt8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="81h-X7-XK8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="tab-account" id="tyu-FG-eSz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7NA-c6-nxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1098" y="-13"/>
-        </scene>
         <!--Main Tab View Controller-->
         <scene sceneID="xeG-bu-nbn">
             <objects>
@@ -52,7 +36,7 @@
                     <connections>
                         <segue destination="6ma-y8-iXo" kind="relationship" relationship="viewControllers" id="7gF-qX-njN"/>
                         <segue destination="mfl-S9-tem" kind="relationship" relationship="viewControllers" id="5HJ-An-fMy"/>
-                        <segue destination="C4K-71-hyb" kind="relationship" relationship="viewControllers" id="mk4-rr-Tu4"/>
+                        <segue destination="5g1-Sl-mNN" kind="relationship" relationship="viewControllers" id="mk4-rr-Tu4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G58-P3-wxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -69,9 +53,18 @@
             </objects>
             <point key="canvasLocation" x="-2858" y="-303"/>
         </scene>
+        <!--Account-->
+        <scene sceneID="8wf-ng-b7I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" id="5g1-Sl-mNN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hgj-pu-oJz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igE-yw-X7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1098" y="-13"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="tab-account" width="25" height="25"/>
         <image name="tab-key" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

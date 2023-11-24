@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class WelcomeViewController: BaseViewController, Storyboarded {
     // outlet control
@@ -40,7 +41,7 @@ class WelcomeViewController: BaseViewController, Storyboarded {
     }
     
     private func setUpBindings() {
-        guard let viewModel = viewModel else { return }
+        //guard let viewModel = viewModel else { return }
         self.pageControl.numberOfPages = self.slides.count
     }
     
@@ -69,6 +70,14 @@ class WelcomeViewController: BaseViewController, Storyboarded {
     @IBAction func skipAction(_ sender: Any) {
         guard let viewModel = viewModel else { return }
         viewModel.skipOnboarding()
+        
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
+        
     }
     
 }

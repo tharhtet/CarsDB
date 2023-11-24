@@ -7,6 +7,19 @@
 
 import Foundation
 
-class MainTabViewModel {
+protocol MainTabViewModelCoordinatorDelegate: class {
+    func didTapOnRow()
+}
+
+protocol MainTabViewModelProtocol {
+    var coordinatorDelegate: MainTabViewModelCoordinatorDelegate?{get set}
+    func initialize()
+}
+
+class MainTabViewModel: MainTabViewModelProtocol {
+    weak var coordinatorDelegate: MainTabViewModelCoordinatorDelegate?
     
+    func initialize() {
+        coordinatorDelegate?.didTapOnRow()
+    }
 }

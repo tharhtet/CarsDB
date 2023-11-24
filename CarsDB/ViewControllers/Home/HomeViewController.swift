@@ -34,12 +34,16 @@ class HomeViewController: BaseViewController, Storyboarded {
     }
     
     private func setUpBindings() {
-        //guard let viewModel = viewModel else { return }
-        CarServices.shared.fetchCarLists { result in
+        guard let viewModel = viewModel else { return }
+        viewModel.getAnimeList { result in
             self.results = result
             self.indicatorIcon.isHidden = true
             self.tableView.reloadData()
         }
+    }
+    
+    @IBAction func menuAction(_ sender: Any) {
+        viewModel?.didTapMenuAction()
     }
 }
 
@@ -54,6 +58,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: self.results[index], index: index)
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = self.results[indexPath.row]
+        viewModel?.didDetailActionByIndex(car: row)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

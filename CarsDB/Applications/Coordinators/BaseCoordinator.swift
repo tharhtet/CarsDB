@@ -21,6 +21,7 @@ protocol Coordinator: AnyObject {
 }
 
 class BaseCoordinator: Coordinator {
+    
     var navigationVC = UINavigationController()
     var childCoordinators = [Coordinator]()
     var parentCoordinator: Coordinator?
@@ -34,13 +35,6 @@ class BaseCoordinator: Coordinator {
     }
     
     func start(coordinator: Coordinator) {
-        childCoordinators += [coordinator]
-        coordinator.parentCoordinator = self
-        coordinator.start()
-    }
-    
-    func start(coordinator: Coordinator, navigation: UINavigationController) {
-        self.navigationVC = navigation
         childCoordinators += [coordinator]
         coordinator.parentCoordinator = self
         coordinator.start()

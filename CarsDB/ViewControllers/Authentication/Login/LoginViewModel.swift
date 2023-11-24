@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 protocol LoginViewModelCoordinatorDelegate: class {
     func didTapOnRow()
@@ -13,12 +14,25 @@ protocol LoginViewModelCoordinatorDelegate: class {
 
 protocol LoginViewModelProtocol {
     var coordinatorDelegate: LoginViewModelCoordinatorDelegate? {get set}
+    
+    func didTapLogin(email: String?, password: String?)
 }
 
 class LoginViewModel: LoginViewModelProtocol {
     var coordinatorDelegate: LoginViewModelCoordinatorDelegate?
     
-    func didTapBack() {
-        coordinatorDelegate?.didTapOnRow()
+    func didTapLogin(email: String?, password: String?) {
+        if let email = email, password == password {
+            if Validation.shared.isValidEmailAddress(emailAddressString: email) {
+                
+                Auth.auth().signIn(withEmail: email, password: password ?? "") { [weak self] authResult, error in
+                    guard let strongSelf = self else { return }
+                    
+                    strongSelf.coordinatorDelegate?.didTapOnRow()
+                }
+            } else {
+                print("isFalse")
+            }
+        }
     }
 }

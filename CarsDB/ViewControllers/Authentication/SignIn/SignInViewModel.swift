@@ -24,6 +24,7 @@ class SignInViewModel: SignInViewModelProtocol {
     }
     
     func didTapOnLogin() {
+        print(coordinatorDelegate)
         coordinatorDelegate?.loginAction()
     }
 }

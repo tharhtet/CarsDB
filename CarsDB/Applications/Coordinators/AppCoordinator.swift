@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AppCoordinator: BaseCoordinator {
     
@@ -17,14 +18,17 @@ class AppCoordinator: BaseCoordinator {
         removeChildCoordinators()
         self.window = window
         
-//        self.showHomeScreen()
-        if !LocalStorage.shared.getIsOnboarding() {
-            self.showTutorial()
+        let auth = Auth.auth()
+        if auth.currentUser != nil {
+            self.showHomeScreen()
         } else {
-            self.showSignInScreen()
+            if !LocalStorage.shared.getIsOnboarding() {
+                self.showTutorial()
+            } else {
+                self.showSignInScreen()
+            }
         }
     }
-    
     
     private func showTutorial() {
         let coordinator = SceneDelegate.container.resolve(WelcomeCoordinator.self)!

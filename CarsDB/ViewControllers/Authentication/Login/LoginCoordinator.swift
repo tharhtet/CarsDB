@@ -8,14 +8,12 @@
 import Foundation
 import UIKit
 
-import UIKit
-
 class LoginCoordinator: BaseCoordinator {
     private let viewModel: LoginViewModel
+    var window: UIWindow?
     
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
-        //self.navigationVC = navigationController
     }
     
     override func start() {
@@ -31,6 +29,10 @@ class LoginCoordinator: BaseCoordinator {
 
 extension LoginCoordinator: LoginViewModelCoordinatorDelegate{
     func didTapOnRow() {
-        navigationVC.popViewController(animated: true)
+        let coordinator = SceneDelegate.container.resolve(MainTabCoordinator.self)!
+        let navigation = BaseNavigationController()
+        coordinator.navigationVC = navigation
+        coordinator.window = window
+        start(coordinator: coordinator)
     }
 }

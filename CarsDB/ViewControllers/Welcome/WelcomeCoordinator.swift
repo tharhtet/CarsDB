@@ -33,13 +33,7 @@ class WelcomeCoordinator: BaseCoordinator {
 
 extension WelcomeCoordinator: WelcomeViewModelCoordinatorDelegate{
     func didTapOnRow() {
-//        let coordinator = SceneDelegate.container.resolve(SignInCoordinator.self)!
-//        let navigation = BaseNavigationController()
-//        coordinator.navigationVC = navigation
-//        coordinator.window = window
-//        start(coordinator: coordinator)
-        
-        let coordinator = SceneDelegate.container.resolve(MainTabCoordinator.self)!
+        let coordinator = SceneDelegate.container.resolve(SignInCoordinator.self)!
         let navigation = BaseNavigationController()
         coordinator.navigationVC = navigation
         coordinator.window = window

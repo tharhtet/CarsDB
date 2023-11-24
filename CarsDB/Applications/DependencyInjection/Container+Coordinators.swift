@@ -19,5 +19,7 @@ extension Container {
         
         autoregister(MainTabCoordinator.self, initializer: MainTabCoordinator.init)
         autoregister(HomeCoordinator.self, initializer: HomeCoordinator.init)
+        autoregister(CarDetailCoordinator.self, initializer: CarDetailCoordinator.init)
+        
     }
 }

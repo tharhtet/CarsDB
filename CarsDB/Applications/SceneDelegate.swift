@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCore
 import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -21,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        FirebaseApp.configure()
         Container.loggingFunction = nil
         SceneDelegate.container.registerDependencies()
         

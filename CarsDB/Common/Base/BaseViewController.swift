@@ -7,7 +7,13 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 class BaseViewController: UIViewController {
+    
+    let firebaseAuth = Auth.auth()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

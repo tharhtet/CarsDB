@@ -10,7 +10,7 @@ import Foundation
 enum AppStoryboard: String {
     case welcome = "Welcome"
     case signIn = "SignIn"
-    case login = "Login"
     case home = "Home"
     case mainTab = "MainTab"
+    case carDetail = "CarDetail"
 }

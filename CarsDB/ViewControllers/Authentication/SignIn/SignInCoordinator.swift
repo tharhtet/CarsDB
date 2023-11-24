@@ -46,6 +46,7 @@ extension SignInCoordinator: SignInViewModelCoordinatorDelegate {
     func loginAction() {
         let coordinator = SceneDelegate.container.resolve(LoginCoordinator.self)!
         coordinator.navigationVC = self.navigationVC
+        coordinator.window = self.window
         start(coordinator: coordinator)
     }
 }

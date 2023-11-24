@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class LoginViewController: BaseViewController, Storyboarded {
+    @IBOutlet weak var loginButton: UIButton!
     
     
     static var storyboard = AppStoryboard.signIn
@@ -20,7 +21,10 @@ class LoginViewController: BaseViewController, Storyboarded {
     
     
     @IBAction func backAction(_ sender: Any) {
-        viewModel?.didTapBack()
+        //viewModel?.didTapLogin()
     }
     
+    @IBAction func loginAction(_ sender: Any) {
+        viewModel?.didTapLogin(email: "a@gmail.com", password: "password")
+    }
 }

@@ -18,5 +18,6 @@ extension Container {
         
         autoregister(MainTabViewModel.self, initializer: MainTabViewModel.init)
         autoregister(HomeViewModel.self, initializer: HomeViewModel.init)
+        autoregister(CarDetailViewModel.self, initializer: CarDetailViewModel.init)
     }
 }
