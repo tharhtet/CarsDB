@@ -9,12 +9,20 @@ import Foundation
 
 protocol CarDetailViewModelCoordinatorDelegate: class {
     func didTapOnRow()
+    func didTapBackAction()
 }
 
 protocol CarDetailViewModelProtocol {
     var coordinatorDelegate: CarDetailViewModelCoordinatorDelegate? {get set}
+    
+    func didTapBackAction()
 }
 
 class CarDetailViewModel: CarDetailViewModelProtocol {
     var coordinatorDelegate: CarDetailViewModelCoordinatorDelegate?
+    var vehicle: VehicleModel?
+    
+    func didTapBackAction() {
+        coordinatorDelegate?.didTapBackAction()
+    }
 }

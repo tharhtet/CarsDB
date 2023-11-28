@@ -16,8 +16,6 @@ class MainTabViewController: UITabBarController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        viewModel?.initialize()
         UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.systemPink], for: .selected)
         UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
         tabBar.barTintColor = .white

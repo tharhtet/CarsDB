@@ -25,9 +25,7 @@ class SignInCoordinator: BaseCoordinator {
         let viewController = SignInViewController.instantiate()
         viewModel.coordinatorDelegate = self
         viewController.viewModel = viewModel
-        //navigationController.viewControllers = [viewController]
         navigationVC = UINavigationController(rootViewController: viewController)
-        //navigationVC.isNavigationBarHidden = true
         navigationVC.navigationBar.isHidden = true
         window?.rootViewController = navigationVC
         window?.makeKeyAndVisible()

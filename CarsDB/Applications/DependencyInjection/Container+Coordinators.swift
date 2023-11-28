@@ -20,6 +20,7 @@ extension Container {
         autoregister(MainTabCoordinator.self, initializer: MainTabCoordinator.init)
         autoregister(HomeCoordinator.self, initializer: HomeCoordinator.init)
         autoregister(CarDetailCoordinator.self, initializer: CarDetailCoordinator.init)
-        
+        autoregister(RentalCoordinator.self, initializer: RentalCoordinator.init)
+        autoregister(AccountCoordinator.self, initializer: AccountCoordinator.init)
     }
 }

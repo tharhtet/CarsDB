@@ -12,7 +12,6 @@ class MainTabCoordinator: BaseCoordinator {
     
     private let viewModel: MainTabViewModel
     var window: UIWindow?
-    var tabBarController: UITabBarController?
     
     init(window: UIWindow?, viewModel: MainTabViewModel) {
         self.viewModel = viewModel
@@ -24,14 +23,22 @@ class MainTabCoordinator: BaseCoordinator {
         viewModel.coordinatorDelegate = self
         viewController.viewModel = viewModel
         
-        let coordinator = SceneDelegate.container.resolve(HomeCoordinator.self)!
-        coordinator.window = window
-        let vc1 = coordinator.start1()
-        viewController.viewControllers = [vc1]
+        let homeCoordinator = SceneDelegate.container.resolve(HomeCoordinator.self)!
+        homeCoordinator.window = window
+        homeCoordinator.navigationVC = self.navigationVC
+        let homeVC = homeCoordinator.startWithTab()
         
-        navigationVC = UINavigationController(rootViewController: viewController)
-        navigationVC.navigationBar.isHidden = true
-        window?.rootViewController = navigationVC
+        let rentalCoordinator = SceneDelegate.container.resolve(RentalCoordinator.self)!
+        //rentalCoordinator.window = window
+        rentalCoordinator.navigationVC = self.navigationVC
+        let rentalVC = rentalCoordinator.startWithTab()
+        
+        let accountCoordinator = SceneDelegate.container.resolve(AccountCoordinator.self)!
+        //accountCoordinator.window = window
+        let accountVC = accountCoordinator.startWithTab()
+        
+        viewController.viewControllers = [homeVC, rentalVC, accountVC]
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         self.windowRootAnimation(window: window)
     }
@@ -39,7 +46,6 @@ class MainTabCoordinator: BaseCoordinator {
 
 extension MainTabCoordinator: MainTabViewModelCoordinatorDelegate {
     func didTapOnRow() {
-        let coordinator = SceneDelegate.container.resolve(HomeCoordinator.self)!
-        coordinator.start()
+        
     }
 }

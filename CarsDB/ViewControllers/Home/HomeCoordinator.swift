@@ -10,7 +10,6 @@ import UIKit
 
 class HomeCoordinator: BaseCoordinator {
     private let viewModel: HomeViewModel
-    var view1: UITabBarController?
     var window: UIWindow?
     
     init(viewModel: HomeViewModel) {
@@ -18,25 +17,25 @@ class HomeCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        let viewController = HomeViewController.instantiate()
-        let vm = HomeViewModel()
-        vm.coordinatorDelegate = self
-        viewController.viewModel = vm
-        //view1?.viewControllers = [viewController]
+        
     }
     
-    func start1() -> UIViewController {
+    func startWithTab() -> UIViewController {
         let viewController = HomeViewController.instantiate()
         let vm = HomeViewModel()
         vm.coordinatorDelegate = self
         viewController.viewModel = vm
-        return viewController
+        navigationVC = UINavigationController(rootViewController: viewController)
+        navigationVC.navigationBar.isHidden = true
+        return navigationVC
     }
 }
 
 extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
     func didTapOnRow(car: VehicleModel?) {
         let coordinator = SceneDelegate.container.resolve(CarDetailCoordinator.self)!
+        coordinator.navigationVC = navigationVC
+        coordinator.vehicle = car
         coordinator.start()
     }
     

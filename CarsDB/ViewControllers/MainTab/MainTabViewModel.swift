@@ -12,14 +12,10 @@ protocol MainTabViewModelCoordinatorDelegate: class {
 }
 
 protocol MainTabViewModelProtocol {
-    var coordinatorDelegate: MainTabViewModelCoordinatorDelegate?{get set}
-    func initialize()
+    var coordinatorDelegate: MainTabViewModelCoordinatorDelegate? {get set}
 }
 
 class MainTabViewModel: MainTabViewModelProtocol {
     weak var coordinatorDelegate: MainTabViewModelCoordinatorDelegate?
-    
-    func initialize() {
-        coordinatorDelegate?.didTapOnRow()
-    }
+
 }
