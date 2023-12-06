@@ -167,13 +167,13 @@ We like the Sentra for its smooth ride, better-than-average interior materials, 
                                                 <rect key="frame" x="0.0" y="918" width="393" height="791.66666666666652"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPl-Pk-kp2">
-                                                        <rect key="frame" x="20" y="12" width="77.666666666666671" height="363.33333333333331"/>
+                                                        <rect key="frame" x="20" y="12" width="77.666666666666671" height="373.33333333333331"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjC-ZN-4Ll">
-                                                        <rect key="frame" x="0.0" y="387.33333333333326" width="393" height="196.33333333333337"/>
+                                                        <rect key="frame" x="0.0" y="397.33333333333326" width="393" height="196.33333333333337"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maps" translatesAutoresizingMaskIntoConstraints="NO" id="YhU-Ed-6BF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="196.33333333333334"/>
@@ -191,16 +191,16 @@ We like the Sentra for its smooth ride, better-than-average interior materials, 
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbi-tM-tAr">
-                                                        <rect key="frame" x="20" y="583.66666666666674" width="353" height="54"/>
+                                                        <rect key="frame" x="20" y="593.66666666666674" width="353" height="44"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reserved Parking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfu-jI-DmJ">
-                                                                <rect key="frame" x="0.0" y="18.666666666666515" width="115" height="17"/>
+                                                                <rect key="frame" x="0.0" y="13.666666666666515" width="115" height="17"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                                                 <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.16 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-1y-bM8">
-                                                                <rect key="frame" x="250" y="18.666666666666515" width="103" height="17"/>
+                                                                <rect key="frame" x="250" y="13.666666666666515" width="103" height="17"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                                                 <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -212,7 +212,7 @@ We like the Sentra for its smooth ride, better-than-average interior materials, 
                                                             <constraint firstItem="Zfu-jI-DmJ" firstAttribute="leading" secondItem="Sbi-tM-tAr" secondAttribute="leading" id="N4L-S6-1VC"/>
                                                             <constraint firstItem="Zfu-jI-DmJ" firstAttribute="centerY" secondItem="Sbi-tM-tAr" secondAttribute="centerY" id="atP-t7-mLh"/>
                                                             <constraint firstAttribute="trailing" secondItem="i0A-1y-bM8" secondAttribute="trailing" id="qeX-wH-HcY"/>
-                                                            <constraint firstAttribute="height" constant="54" id="vu4-Ml-4yo"/>
+                                                            <constraint firstAttribute="height" constant="44" id="vu4-Ml-4yo"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMP-og-8n5">

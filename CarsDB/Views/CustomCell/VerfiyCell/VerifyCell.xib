@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VerifyCell" rowHeight="94" id="B38-BT-0ar" customClass="VerifyCell" customModule="CarsDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="94"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B38-BT-0ar" id="Q78-8l-lmy">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcG-mO-BZ4">
+                        <rect key="frame" x="20" y="12" width="353" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="jf4-Iv-0bb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
+                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To rent a car, your profile must be verified for safety and insurance reasons." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwn-rM-pb5">
+                        <rect key="frame" x="20" y="34" width="353" height="14"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-XO-bsD">
+                        <rect key="frame" x="20" y="56" width="117" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Jua-tf-uAP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Verify my profile"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Puf-XO-bsD" firstAttribute="leading" secondItem="Q78-8l-lmy" secondAttribute="leading" constant="20" id="5VL-Ql-kqQ"/>
+                    <constraint firstItem="bwn-rM-pb5" firstAttribute="top" secondItem="RcG-mO-BZ4" secondAttribute="bottom" constant="2" id="6Z3-VT-xhZ"/>
+                    <constraint firstItem="RcG-mO-BZ4" firstAttribute="leading" secondItem="Q78-8l-lmy" secondAttribute="leading" constant="20" id="NPf-s9-vcD"/>
+                    <constraint firstItem="Puf-XO-bsD" firstAttribute="top" secondItem="bwn-rM-pb5" secondAttribute="bottom" constant="8" id="P4W-bH-l2y"/>
+                    <constraint firstItem="RcG-mO-BZ4" firstAttribute="top" secondItem="Q78-8l-lmy" secondAttribute="top" constant="12" id="URe-ep-wp1"/>
+                    <constraint firstAttribute="bottom" secondItem="Puf-XO-bsD" secondAttribute="bottom" constant="8" id="YZ6-4U-3WL"/>
+                    <constraint firstAttribute="trailing" secondItem="RcG-mO-BZ4" secondAttribute="trailing" constant="20" id="hEZ-nH-5h5"/>
+                    <constraint firstItem="bwn-rM-pb5" firstAttribute="leading" secondItem="RcG-mO-BZ4" secondAttribute="leading" id="sj7-td-m0i"/>
+                    <constraint firstItem="bwn-rM-pb5" firstAttribute="trailing" secondItem="RcG-mO-BZ4" secondAttribute="trailing" id="tQp-G8-T3c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="278.62595419847327" y="19.014084507042256"/>
+        </tableViewCell>
+    </objects>
+</document>

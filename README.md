@@ -1,11 +1,9 @@
-[![BuyMeACoffee](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg)](https://www.buymeacoffee.com/WojciechKulik)
-
 ## Swift-MVVMC-Demo
 Sample iOS application in Swift presenting usage of MVVM-C pattern.
 
-![](https://github.com/wojciech-kulik/Swift-MVVMC-Demo/blob/master/screenshots.png)
+![](https://github.com/tharhtet/CarsDB/blob/dev/screenshot.png)
 
-If you want to check out just a simple MVVM-C pattern without extra features, please see this repository: [Swift-MVVMC-SimpleExample](https://github.com/wojciech-kulik/Swift-MVVMC-SimpleExample)
+If you want to check out just a simple MVVM-C pattern without extra features, please see this repository: [Swift-MVVMC-SimpleExample](https://github.com/tharhtet/CarsDB)
 
 ## Application Features
 - Sign in screen
@@ -26,14 +24,14 @@ If you want to check out just a simple MVVM-C pattern without extra features, pl
 This project is POC for MVVM-C pattern where:
 - View is represented by `UIViewController` designed in Storyboard
 - Model represents state and domain objects
-- ViewModel interacts with Model and prepares data to be displayed. View uses ViewModel's data either directly or through bindings (using RxSwift) to configure itself. View also notifies ViewModel about user actions like button tap.
+- ViewModel interacts with Model and prepares data to be displayed. View uses ViewModel's data either directly or through bindings (using Delegation) to configure itself. View also notifies ViewModel about user actions like button tap.
 - Coordinator is responsible for handling application flow, decides when and where to go based on events from ViewModel (using RxSwift bindings).
 
 `View` <- `ViewController` <- bindings -> (`ViewModel` -> `Model`) <- bindings -> `Coordinator`
 
 
 ## Coordinators hierarchy
-![](https://github.com/wojciech-kulik/Swift-MVVMC-Demo/blob/master/coordinators.png)
+![](https://github.com/tharhtet/CarsDB/blob/dev/coordinators.png)
 
 ## Pros
 - View doesn't contain logic, it just configures itself based on ViewModel.
@@ -53,7 +51,7 @@ Project uses [CocoaPods](https://cocoapods.org) for dependencies, so install it 
     pod install
 
 ## Application usage
-Sample login screen accepts any e-mail address and password `pass`.
+Sample login screen accepts any e-mail address `a@gmail.com` and password `password`.
 
 ## References
 - [MVVM + Coordinators + RxSwift based on sample iOS application with authentication](https://wojciechkulik.pl/ios/mvvm-coordinators-rxswift-and-sample-ios-application-with-authentication)

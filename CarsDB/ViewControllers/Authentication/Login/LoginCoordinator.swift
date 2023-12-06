@@ -20,8 +20,7 @@ class LoginCoordinator: BaseCoordinator {
         let viewController = LoginViewController.instantiate()
         viewModel.coordinatorDelegate = self
         viewController.viewModel = viewModel
-        //navigationVC.isNavigationBarHidden = false
-        navigationVC.pushViewController(viewController, animated: true)
+        navigationVC.present(viewController, animated: true)
     }
 
 }

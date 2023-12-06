@@ -15,5 +15,10 @@ class RentalViewController: BaseViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Rentals"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.navigationBar.sizeToFit()
     }
 }

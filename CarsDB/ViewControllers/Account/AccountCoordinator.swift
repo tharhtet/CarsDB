@@ -10,6 +10,7 @@ import UIKit
 
 class AccountCoordinator: BaseCoordinator {
     private let viewModel: AccountViewModel
+    var window: UIWindow?
     
     init(viewModel: AccountViewModel) {
         self.viewModel = viewModel
@@ -24,17 +25,19 @@ class AccountCoordinator: BaseCoordinator {
         let vm = AccountViewModel()
         vm.coordinatorDelegate = self
         viewController.viewModel = vm
-        return viewController
+        navigationVC = UINavigationController(rootViewController: viewController)
+        navigationVC.navigationBar.isHidden = false
+        return navigationVC
     }
 }
 
 
 extension AccountCoordinator: AccountViewModelCoordinatorDelegate {
     func didTapOnRow() {
-//        let coordinator = SceneDelegate.container.resolve(MainTabCoordinator.self)!
-//        let navigation = BaseNavigationController()
-//        coordinator.navigationVC = navigation
-//        coordinator.window = window
-//        start(coordinator: coordinator)
+        let coordinator = SceneDelegate.container.resolve(SignInCoordinator.self)!
+        let navigation = BaseNavigationController()
+        coordinator.navigationVC = navigation
+        coordinator.window = window
+        coordinator.start()
     }
 }

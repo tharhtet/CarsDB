@@ -34,7 +34,7 @@ class MainTabCoordinator: BaseCoordinator {
         let rentalVC = rentalCoordinator.startWithTab()
         
         let accountCoordinator = SceneDelegate.container.resolve(AccountCoordinator.self)!
-        //accountCoordinator.window = window
+        accountCoordinator.window = window
         let accountVC = accountCoordinator.startWithTab()
         
         viewController.viewControllers = [homeVC, rentalVC, accountVC]

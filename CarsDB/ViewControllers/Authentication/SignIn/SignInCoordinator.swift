@@ -21,6 +21,7 @@ class SignInCoordinator: BaseCoordinator {
         viewController.viewModel = viewModel
         navigationVC.viewControllers = [viewController]
     }
+    
     override func start() {
         let viewController = SignInViewController.instantiate()
         viewModel.coordinatorDelegate = self

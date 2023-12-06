@@ -15,23 +15,18 @@ protocol LoginViewModelCoordinatorDelegate: class {
 protocol LoginViewModelProtocol {
     var coordinatorDelegate: LoginViewModelCoordinatorDelegate? {get set}
     
-    func didTapLogin(email: String?, password: String?)
+    func didTapLogin(email: String, password: String, completion: @escaping (_ done: Bool) -> Void)
 }
 
 class LoginViewModel: LoginViewModelProtocol {
     var coordinatorDelegate: LoginViewModelCoordinatorDelegate?
     
-    func didTapLogin(email: String?, password: String?) {
-        if let email = email, password == password {
-            if Validation.shared.isValidEmailAddress(emailAddressString: email) {
-                
-                Auth.auth().signIn(withEmail: email, password: password ?? "") { [weak self] authResult, error in
-                    guard let strongSelf = self else { return }
-                    
-                    strongSelf.coordinatorDelegate?.didTapOnRow()
-                }
-            } else {
-                print("isFalse")
+    func didTapLogin(email: String, password: String, completion: @escaping (_ done: Bool) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+            completion(error == nil)
+            if error == nil {
+                strongSelf.coordinatorDelegate?.didTapOnRow()
             }
         }
     }

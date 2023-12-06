@@ -24,7 +24,9 @@ class RentalCoordinator: BaseCoordinator {
         let vm = RentalViewModel()
         vm.coordinatorDelegate = self
         viewController.viewModel = vm
-        return viewController
+        navigationVC = UINavigationController(rootViewController: viewController)
+        navigationVC.navigationBar.isHidden = false
+        return navigationVC
     }
 }
 

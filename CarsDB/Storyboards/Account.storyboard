@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLy-YZ-mmX">
-                                <rect key="frame" x="159" y="347" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zEb-lL-0ul">
+                                <rect key="frame" x="20" y="59" width="353" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="81h-X7-XK8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zEb-lL-0ul" firstAttribute="top" secondItem="81h-X7-XK8" secondAttribute="top" id="Gax-YN-hGF"/>
+                            <constraint firstItem="81h-X7-XK8" firstAttribute="trailing" secondItem="zEb-lL-0ul" secondAttribute="trailing" constant="20" id="bYT-Jf-p4S"/>
+                            <constraint firstItem="81h-X7-XK8" firstAttribute="bottom" secondItem="zEb-lL-0ul" secondAttribute="bottom" id="k6R-ga-fge"/>
+                            <constraint firstItem="zEb-lL-0ul" firstAttribute="leading" secondItem="81h-X7-XK8" secondAttribute="leading" constant="20" id="sWU-Vl-QKD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="tab-account" id="tyu-FG-eSz"/>
+                    <connections>
+                        <outlet property="tableView" destination="zEb-lL-0ul" id="GZd-kp-m6G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NA-c6-nxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,8 +42,5 @@
     </scenes>
     <resources>
         <image name="tab-account" width="25" height="25"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
