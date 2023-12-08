@@ -15,4 +15,5 @@ enum AppStoryboard: String {
     case carDetail = "CarDetail"
     case account = "Account"
     case rental = "Rental"
+    case prompt = "Prompt"
 }

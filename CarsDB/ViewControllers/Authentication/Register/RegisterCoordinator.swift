@@ -19,12 +19,12 @@ class RegisterCoordinator: BaseCoordinator {
         let viewController = RegisterViewController.instantiate()
         viewModel.coordinatorDelegate = self
         viewController.viewModel = viewModel
-        navigationVC.pushViewController(viewController, animated: true)
+        navigationVC.present(viewController, animated: true)
     }
 }
 
 extension RegisterCoordinator: RegisterViewModelCoordinatorDelegate {
     func didTapOnRow() {
-        navigationVC.popViewController(animated: true)
+        navigationVC.dismiss(animated: true)
     }
 }

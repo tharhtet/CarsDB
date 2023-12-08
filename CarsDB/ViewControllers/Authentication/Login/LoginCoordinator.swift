@@ -22,7 +22,6 @@ class LoginCoordinator: BaseCoordinator {
         viewController.viewModel = viewModel
         navigationVC.present(viewController, animated: true)
     }
-
 }
 
 
@@ -33,5 +32,9 @@ extension LoginCoordinator: LoginViewModelCoordinatorDelegate{
         coordinator.navigationVC = navigation
         coordinator.window = window
         start(coordinator: coordinator)
+    }
+    
+    func didTapOnBack() {
+        navigationVC.dismiss(animated: true)
     }
 }

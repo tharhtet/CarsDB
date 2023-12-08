@@ -10,12 +10,14 @@ import FirebaseAuth
 
 protocol LoginViewModelCoordinatorDelegate: class {
     func didTapOnRow()
+    func didTapOnBack()
 }
 
 protocol LoginViewModelProtocol {
     var coordinatorDelegate: LoginViewModelCoordinatorDelegate? {get set}
-    
+
     func didTapLogin(email: String, password: String, completion: @escaping (_ done: Bool) -> Void)
+    func didTapBack()
 }
 
 class LoginViewModel: LoginViewModelProtocol {
@@ -29,5 +31,9 @@ class LoginViewModel: LoginViewModelProtocol {
                 strongSelf.coordinatorDelegate?.didTapOnRow()
             }
         }
+    }
+    
+    func didTapBack() {
+        coordinatorDelegate?.didTapOnBack()
     }
 }

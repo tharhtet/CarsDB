@@ -1,7 +1,7 @@
 ## Swift-MVVMC-Demo
 Sample iOS application in Swift presenting usage of MVVM-C pattern.
 
-![](https://github.com/tharhtet/CarsDB/blob/dev/screenshot.png)
+![](https://github.com/tharhtet/CarsDB/blob/dev/screenshot.jpg)
 
 If you want to check out just a simple MVVM-C pattern without extra features, please see this repository: [Swift-MVVMC-SimpleExample](https://github.com/tharhtet/CarsDB)
 

@@ -22,6 +22,13 @@
 		36279A262B10DB7000BF3D9A /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36279A252B10DB7000BF3D9A /* SliderCell.swift */; };
 		36279A282B10DB7C00BF3D9A /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36279A272B10DB7C00BF3D9A /* SliderCell.xib */; };
 		362FA10F2B2071DD00D49DED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 362FA10E2B2071DD00D49DED /* README.md */; };
+		36523DEA2B230BAA00544743 /* Prompt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36523DE92B230BAA00544743 /* Prompt.storyboard */; };
+		36523DEF2B230F3C00544743 /* ErrorAlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36523DEE2B230F3C00544743 /* ErrorAlertCoordinator.swift */; };
+		36523DF12B230F4600544743 /* ErrorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36523DF02B230F4600544743 /* ErrorAlertController.swift */; };
+		36523DF32B230F5200544743 /* ErrorAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36523DF22B230F5200544743 /* ErrorAlertViewModel.swift */; };
+		36523DF52B23106000544743 /* ConfirmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36523DF42B23106000544743 /* ConfirmCoordinator.swift */; };
+		36523DF72B23106C00544743 /* ConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36523DF62B23106C00544743 /* ConfirmController.swift */; };
+		36523DF92B23107800544743 /* ConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36523DF82B23107800544743 /* ConfirmViewModel.swift */; };
 		365C4F1F2B14B87600D6A875 /* CarTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4F1E2B14B87600D6A875 /* CarTabCell.swift */; };
 		365C4F212B14B87D00D6A875 /* CarTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365C4F202B14B87D00D6A875 /* CarTabCell.xib */; };
 		365C4F232B14BA2B00D6A875 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4F222B14BA2B00D6A875 /* FlowLayout.swift */; };
@@ -190,6 +197,13 @@
 		36279A252B10DB7000BF3D9A /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		36279A272B10DB7C00BF3D9A /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		362FA10E2B2071DD00D49DED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		36523DE92B230BAA00544743 /* Prompt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prompt.storyboard; sourceTree = "<group>"; };
+		36523DEE2B230F3C00544743 /* ErrorAlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertCoordinator.swift; sourceTree = "<group>"; };
+		36523DF02B230F4600544743 /* ErrorAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertController.swift; sourceTree = "<group>"; };
+		36523DF22B230F5200544743 /* ErrorAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewModel.swift; sourceTree = "<group>"; };
+		36523DF42B23106000544743 /* ConfirmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCoordinator.swift; sourceTree = "<group>"; };
+		36523DF62B23106C00544743 /* ConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmController.swift; sourceTree = "<group>"; };
+		36523DF82B23107800544743 /* ConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewModel.swift; sourceTree = "<group>"; };
 		365C4F1E2B14B87600D6A875 /* CarTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTabCell.swift; sourceTree = "<group>"; };
 		365C4F202B14B87D00D6A875 /* CarTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTabCell.xib; sourceTree = "<group>"; };
 		365C4F222B14BA2B00D6A875 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
@@ -407,6 +421,35 @@
 				36279A272B10DB7C00BF3D9A /* SliderCell.xib */,
 			);
 			path = ImageSlider;
+			sourceTree = "<group>";
+		};
+		36523DEB2B230EFA00544743 /* Prompt */ = {
+			isa = PBXGroup;
+			children = (
+				36523DED2B230F2400544743 /* Confirm */,
+				36523DEC2B230F0800544743 /* ErrorAlert */,
+			);
+			path = Prompt;
+			sourceTree = "<group>";
+		};
+		36523DEC2B230F0800544743 /* ErrorAlert */ = {
+			isa = PBXGroup;
+			children = (
+				36523DEE2B230F3C00544743 /* ErrorAlertCoordinator.swift */,
+				36523DF02B230F4600544743 /* ErrorAlertController.swift */,
+				36523DF22B230F5200544743 /* ErrorAlertViewModel.swift */,
+			);
+			path = ErrorAlert;
+			sourceTree = "<group>";
+		};
+		36523DED2B230F2400544743 /* Confirm */ = {
+			isa = PBXGroup;
+			children = (
+				36523DF42B23106000544743 /* ConfirmCoordinator.swift */,
+				36523DF62B23106C00544743 /* ConfirmController.swift */,
+				36523DF82B23107800544743 /* ConfirmViewModel.swift */,
+			);
+			path = Confirm;
 			sourceTree = "<group>";
 		};
 		365C4F1D2B14B86300D6A875 /* CarTabCell */ = {
@@ -789,6 +832,7 @@
 				36279A0D2B10808B00BF3D9A /* Rental.storyboard */,
 				3695D4C92B0F166C0055A7BA /* Account.storyboard */,
 				3695D4CB2B0F6C900055A7BA /* CarDetail.storyboard */,
+				36523DE92B230BAA00544743 /* Prompt.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -796,6 +840,7 @@
 		36F0656E2B05F78B00589B9A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				36523DEB2B230EFA00544743 /* Prompt */,
 				36C0B4B92B0A808F006897B8 /* MainTab */,
 				36AF86DE2B09AF7700371181 /* Home */,
 				3695D4CD2B0F6CEE0055A7BA /* CarDetail */,
@@ -1020,6 +1065,7 @@
 				36AF87352B09B9F100371181 /* SF-UI-Text-Light.otf in Resources */,
 				36AF87442B09B9F100371181 /* SF-Pro-Display-Black.otf in Resources */,
 				36AF87252B09B9F100371181 /* SF-Pro-Display-Light.otf in Resources */,
+				36523DEA2B230BAA00544743 /* Prompt.storyboard in Resources */,
 				367E6F862B15DDC10067EBFA /* VerifyCell.xib in Resources */,
 				36B6C7102B0B3287002E89F0 /* CarRentCell.xib in Resources */,
 				36F065312B05F31A00589B9A /* Assets.xcassets in Resources */,
@@ -1134,6 +1180,7 @@
 				36279A122B1081AC00BF3D9A /* RentalViewController.swift in Sources */,
 				36F065712B05F7D600589B9A /* WelcomeViewModel.swift in Sources */,
 				36AF87562B09D5C600371181 /* BaseNavigationController.swift in Sources */,
+				36523DF52B23106000544743 /* ConfirmCoordinator.swift in Sources */,
 				367E6F8A2B15E4ED0067EBFA /* AlertView.swift in Sources */,
 				36F0655D2B05F3E000589B9A /* Container+Coordinators.swift in Sources */,
 				36279A1A2B10838800BF3D9A /* AccountViewModel.swift in Sources */,
@@ -1152,6 +1199,7 @@
 				36AF87592B09DDD100371181 /* RegisterViewController.swift in Sources */,
 				3695D4D12B0F6D510055A7BA /* CarDetailViewModel.swift in Sources */,
 				36F065612B05F41F00589B9A /* Container+ViewModels.swift in Sources */,
+				36523DF12B230F4600544743 /* ErrorAlertController.swift in Sources */,
 				36E7C7432B0C8D3300C1B1CF /* VehicleModel.swift in Sources */,
 				365C4F232B14BA2B00D6A875 /* FlowLayout.swift in Sources */,
 				36F065792B05F8F200589B9A /* AppStoryboard.swift in Sources */,
@@ -1168,13 +1216,17 @@
 				36A6DA7A2B086A73002E093A /* SignInViewModel.swift in Sources */,
 				36279A182B10832000BF3D9A /* AccountViewController.swift in Sources */,
 				3689BEA72B0755A4001FD986 /* OnboardingCell.swift in Sources */,
+				36523DF92B23107800544743 /* ConfirmViewModel.swift in Sources */,
 				36AF86D72B09AB1D00371181 /* LocalStorage.swift in Sources */,
 				36AF875D2B09DDE900371181 /* RegisterCoordinator.swift in Sources */,
 				36279A212B10D93B00BF3D9A /* DetailSliderViewModel.swift in Sources */,
 				36279A232B10D94700BF3D9A /* DetailSliderCoordinator.swift in Sources */,
+				36523DF32B230F5200544743 /* ErrorAlertViewModel.swift in Sources */,
 				3689BEB52B075E1E001FD986 /* SlideModel.swift in Sources */,
+				36523DF72B23106C00544743 /* ConfirmController.swift in Sources */,
 				36279A162B10822200BF3D9A /* RentalViewModel.swift in Sources */,
 				36AF86E02B09AF9000371181 /* HomeViewController.swift in Sources */,
+				36523DEF2B230F3C00544743 /* ErrorAlertCoordinator.swift in Sources */,
 				36A6DA842B087467002E093A /* LocalizationUtils.swift in Sources */,
 				36A6DA702B085EBA002E093A /* Button.swift in Sources */,
 				36C0B4BF2B0A80B8006897B8 /* MainTabCoordinator.swift in Sources */,

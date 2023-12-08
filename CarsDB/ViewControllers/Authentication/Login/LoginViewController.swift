@@ -58,7 +58,7 @@ class LoginViewController: BaseViewController, Storyboarded {
     }
     
     @IBAction func backAction(_ sender: Any) {
-        //viewModel?.didTapLogin()
+        viewModel?.didTapBack()
     }
     
     @IBAction func loginAction(_ sender: Any) {
